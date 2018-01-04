@@ -6,7 +6,7 @@
 - Detect great youtube resources based on popularity and searches
 - Search on external new sources to enrich video searches
  
-Demo Video: [https://youtu.be/OoId5gk5dsk](https://youtu.be/OoId5gk5dsk) 
+Demo Video: [https://youtu.be/c4Zwj5gaE9E](https://youtu.be/c4Zwj5gaE9E) 
 
 ## Setup
 - Dev machine: Ubuntu 16.04.3 LTS 
