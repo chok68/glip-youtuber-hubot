@@ -148,6 +148,11 @@ var formatItem = (item) => {
     let lines = []
     lines.push(['|', '**' + item.snippet.title.substr(0, 40) + '**', '|', item.snippet.description, '|'].join(''))
     lines.push(['|', url, '|', 'Published at: ' + item.snippet.publishedAt, '|'].join(''))
+    if (item.id.videoId) {
+        lines.push(['|', ':point_right: related', '|', 'tr ' + item.id.videoId, '|'].join(''));
+    }
+    lines.push(['|', ':projector: search videos', '|', 'ts ' + item.snippet.title.substr(0, 40), '|'].join(''));
+    lines.push(['|', ':newspaper: search news', '|', 'tn ' + item.snippet.title.substr(0, 40), '|'].join(''));
     let formatted = lines.join('\n');
     return formatted
 }
