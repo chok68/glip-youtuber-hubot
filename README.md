@@ -15,6 +15,11 @@ Demo Video: [https://youtu.be/c4Zwj5gaE9E](https://youtu.be/c4Zwj5gaE9E)
 - Nodejs 8 [https://nodejs.org/](https://nodejs.org/)
 - Yarn
 
+For more info on setting up please refer to:
+
+- [https://github.com/tylerlong/hubot-glip](https://github.com/tylerlong/hubot-glip)
+- [https://github.com/tylerlong/glip-hubot-t](https://github.com/tylerlong/glip-hubot-t)
+
 ### Glip
 
 - Create RingCentral dev account
