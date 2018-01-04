@@ -2,18 +2,18 @@
 //   Example scripts for you to examine and try out.
 //
 // Commands:
-//   hubot search <query> - search videos/channels
-//   hubot list categories
-//   hubot most popular by category <category_id>
-//   hubot related <video_id> - show related to <video_id>
-//   hubot news <query> -search news using <query>
+//   hubot s <query> | search <query> - search videos/channels
+//   hubot lc | list categories
+//   hubot mpc <category_id> | most popular by category <category_id>
+//   hubot r <video_id> | related <video_id> - show related to <video_id>
+//   hubot n <query> | news <query> - search news using <query>
 
 const YouTube = require('youtube-node');
 const request = require('request');
 
 module.exports = (robot) => {
 
-  robot.respond(/news\s+(.+)$/, (res) => {
+  robot.respond(/n\s+(.+)$|news\s+(.+)$/, (res) => {
 
     let searchValue = res.match[1]
 
@@ -50,7 +50,7 @@ module.exports = (robot) => {
     });
   })
 
-  robot.respond(/search\s+(.*)$/, (res) => {
+  robot.respond(/s\s+(.*)$|search\s+(.*)$/, (res) => {
 
     let searchValue = res.match[1]
 
@@ -82,7 +82,7 @@ module.exports = (robot) => {
     });
   })
 
-  robot.respond(/related\s+(.+)$/, (res) => {
+  robot.respond(/r\s+(.+)$|related\s+(.+)$/, (res) => {
 
     let searchValue = res.match[1]
 
@@ -110,7 +110,7 @@ module.exports = (robot) => {
 
   })
 
-  robot.respond(/list categories$/, (res) => {
+  robot.respond(/lc$|list categories$/, (res) => {
 
     let youTube = new YouTube();
     youTube.setKey(process.env.YOUTUBE_API_KEY);
@@ -133,7 +133,7 @@ module.exports = (robot) => {
     });
   })
 
-  robot.respond(/most popular by category\s+(\d+)$/, (res) => {
+  robot.respond(/mpc\s+(\d+)$|most popular by category\s+(\d+)$/, (res) => {
 
     let searchValue = res.match[1]
 
