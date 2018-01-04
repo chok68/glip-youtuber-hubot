@@ -146,13 +146,8 @@ module.exports = (robot) => {
 var formatItem = (item) => {
     let url = 'https://www.youtube.com/watch?v=' + item.id.videoId;
     let lines = []
-    lines.push('**' + item.snippet.title.substr(0, 40) + '**');
-    lines.push(url);
-    if (item.id.videoId) {
-        lines.push('**trelated ' + item.id.videoId + '**');
-    }
-    lines.push('published at: ' + item.snippet.publishedAt);
-    lines.push(item.snippet.description);
+    lines.push(['|', '**' + item.snippet.title.substr(0, 40) + '**', '|', item.snippet.description, '|'].join(''))
+    lines.push(['|', url, '|', 'Published at: ' + item.snippet.publishedAt, '|'].join(''))
     let formatted = lines.join('\n');
     return formatted
 }
